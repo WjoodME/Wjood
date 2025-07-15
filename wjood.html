@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>وجود Wjood</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-color: #6d765b;
+      --accent-color: #C0A062;
+      --bg-color: #F9F9F9;
+      --text-color: #222;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: var(--main-color);
+      color: white;
+      padding: 100px 20px 60px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #eee;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      color: var(--main-color);
+      position: relative;
+    }
+
+    section h2::before {
+      content: '⟡';
+      color: var(--accent-color);
+      font-size: 1.5rem;
+      margin-left: 10px;
+    }
+
+    section p, ul {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-right: 20px;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 12px 12px 0 0;
+      text-decoration: none;
+      color: white;
+      background: var(--main-color);
+      padding: 10px 20px;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+
+    .contact a:hover {
+      background: var(--accent-color);
+      color: var(--main-color);
+    }
+
+    .cv-button {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      padding: 8px 16px;
+      background-color: var(--main-color);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .cv-button:hover {
+      background-color: var(--accent-color);
+      color: var(--main-color);
+    }
+
+    .cards-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 20px;
+    }
+
+    .card {
+      width: 270px;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      border-radius: 10px;
+      background-color: #f5f5f5;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: var(--main-color);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .tech-used {
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: #888;
+      margin-top: auto;
+      padding-top: 10px;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    footer {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>اهلًا ! انا وجود العيسى</h1>
+    <p>مهندسة برمـجـيـات - مصممة واجــهات</p>
+  </header>
+
+  <section id="about">
+    <h2>مين وجود؟</h2>
+    <p>أنا خريجة حديثة من تخصص علوم حاسب آلي من جامعة أم القرى، وعندي شغف كبير في تصميم الواجهات وتجربة المستخدم (UI/UX)، والتصميم بشكل عام.
+متعتي هي إني أحوّل فكرة العميل إلى حقيقة!
+
+أستمتع أيضًا في تنفيذ المشاريع البرمجية، اختبارها، وربطها بأنظمة الذكاء الاصطناعي اللي تسهّل الصعب!.</p>
+    <a class="cv-button" href="https://drive.google.com/file/d/1HOGsD4zxbvE7AQHBpCCuGZsHSD69fke4/view?usp=sharing" target="_blank">السيرة الذاتية</a>
+  </section>
+
+  <section id="work">
+    <h2>أعمالي</h2>
+
+    <h3 style="margin-bottom: 15px; font-size: 1.3rem;">تطوير كامل - Full Stack Development</h3>
+    <div class="cards-container">
+      <div class="card">
+        <img src="Holla.png" alt="مشروع حلة">
+        <h3>حلة</h3>
+        <p>منصة تستخدم الذكاء الاصطناعي للتعرف على صور الملابس وتصنيفها من مناطق السعودية.</p>
+        <div class="tech-used">HTML - CSS - JavaScript - Python - YOLO</div>
+      </div>
+
+      <div class="card">
+        <img src="sh.png" alt="مشروع شغف">
+        <h3>شغف</h3>
+        <p>لعبة عربية تفاعلية وتعليمية مصممة للأطفال. تتكون هذه اللعبة المبتكرة من قسمين رئيسيين: فطين للعلوم وحليم للقصص الدينية!</p>
+        <div class="tech-used">Java - JavaFX</div>
+      </div>
+    </div>
+
+    <h3 style="margin-bottom: 15px; font-size: 1.3rem;">تصميم واجهة المستخدم وتجربة المستخدم - UI/UX Design</h3>
+    <div class="cards-container">
+      <div class="card">
+        <img src="safety.jpg" alt="Safety School">
+        <h3>Safety School</h3>
+        <p>هو تطبيق مميز يوفّر الأمان للأطفال وأسرهم، من خلال متابعة حالة الطفل وإبقاء الأهل على اطلاع دائم - تابع لشركة النهضة الرقمية بمكة</p>
+        <div class="tech-used">Figma</div>
+      </div>
+
+      <div class="card">
+        <img src="Basel.png" alt="Basel">
+        <h3>منصــة باســل</h3>
+        <p>موقع مصمم للأطفال يساعدهم ينجزون مهامهم اليومية مثل الواجبات المدرسية، القراءة، وغيرها من الأنشطة. بمتابعة الأهل والطفل كل ما ينجز مهمة يجمع نقاط.</p>
+        <div class="tech-used">Figma</div>
+      </div>
+
+      <div class="card">
+        <img src="Herrah.png" alt="Herrah">
+        <h3>تطبيق هرة</h3>
+        <p>التطبيق المثالي لمحبي القطط، حيث يقدم العيادات والفنادق والمتاجر ومراكز التبني و ايضًا اخدمة هداء الخدمات بكل سهولــة</p>
+        <div class="tech-used">Figma</div>
+      </div>
+    </div>
+
+    <p class="note">انتظروني في مشاريع اخرى بإذن الله 🌟</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>تواصل معي</h2>
+    <a href="mailto:wjoodaleissa@gmail.com">البريد الالكتروني</a>
+    <a href="https://www.linkedin.com/in/wjood-aleissa" target="_blank">لينكدان</a>
+  </section>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+</body>
+</html>
+
+
+
